@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Logic;
+using Logic.Exceptions;
+using System;
 
 namespace ConsoleApp {
+
+    /// <summary>
+    /// 
+    /// </summary>
     class Program {
-        static void Main(string[] args) {
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
+        static void Main() {
+            try {
+                Console.WriteLine(StringHelper.IsPalindrome("ibofobi"));
+            } catch(EmptyStringException ex) {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
