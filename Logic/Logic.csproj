@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StringHelper.cs" />
+    <Compile Include="StringExtension.cs" />
     <Compile Include="Exceptions\EmptyStringException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

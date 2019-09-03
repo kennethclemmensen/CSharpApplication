@@ -3,9 +3,9 @@
 namespace Logic {
 
     /// <summary>
-    /// The StringHelper class contains utility methods to use with strings
+    /// The StringExtension class contains extension methods to use with strings
     /// </summary>
-    public static class StringHelper {
+    public static class StringExtension {
 
         /// <summary>
         /// Check if the word is a palindrome
@@ -13,7 +13,7 @@ namespace Logic {
         /// <param name="word">The word to check</param>
         /// <returns>True if the word is a palindrome. False if the word isn't a palindrome</returns>
         /// <exception cref="EmptyStringException">Throws an EmptyStringException if word is empty</exception>
-        public static bool IsPalindrome(string word) {
+        public static bool IsPalindrome(this string word) {
             if(word == "") {
                 throw new EmptyStringException("Word is empty");
             } else if(word.Length == 1) {

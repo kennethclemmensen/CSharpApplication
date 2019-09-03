@@ -5,10 +5,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTest.Logic {
 
     /// <summary>
-    /// The StringHelperTest contains methods to test the StringHelper class
+    /// The StringExtensionTest contains methods to test the StringExtension class
     /// </summary>
     [TestClass]
-    public class StringHelperTest {
+    public class StringExtensionTest {
 
         /// <summary>
         /// Test initialize
@@ -31,7 +31,8 @@ namespace UnitTest.Logic {
         /// </summary>
         [TestMethod]
         public void TestIsPalindrome() {
-            Assert.AreEqual(true, StringHelper.IsPalindrome("ibofobi"));
+            var word = "ibofobi";
+            Assert.AreEqual(true, word.IsPalindrome());
         }
 
         /// <summary>
@@ -40,7 +41,8 @@ namespace UnitTest.Logic {
         [TestMethod]
         [ExpectedException(typeof(EmptyStringException))]
         public void TestIsPalindromeWithAnEmptyString() {
-            Assert.AreEqual(true, StringHelper.IsPalindrome(""));
+            var word = "";
+            Assert.AreEqual(true, word.IsPalindrome());
         }
     }
 }
