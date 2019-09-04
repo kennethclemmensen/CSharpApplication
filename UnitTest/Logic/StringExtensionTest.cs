@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTest.Logic {
 
     /// <summary>
-    /// The StringExtensionTest contains methods to test the StringExtension class
+    /// The StringExtensionTest class contains methods to test the StringExtension class
     /// </summary>
     [TestClass]
     public class StringExtensionTest {
@@ -14,17 +14,13 @@ namespace UnitTest.Logic {
         /// Test initialize
         /// </summary>
         [TestInitialize]
-        public void TestInitialize() {
-
-        }
+        public void TestInitialize() { }
 
         /// <summary>
         /// Test cleanup
         /// </summary>
         [TestCleanup]
-        public void TestCleanup() {
-
-        }
+        public void TestCleanup() { }
 
         /// <summary>
         /// Test the IsPalindrome method
@@ -42,6 +38,15 @@ namespace UnitTest.Logic {
         [ExpectedException(typeof(EmptyStringException))]
         public void TestIsPalindromeWithAnEmptyString() {
             var word = "";
+            Assert.AreEqual(true, word.IsPalindrome());
+        }
+
+        /// <summary>
+        /// Test the IsPalindrome method with one letter
+        /// </summary>
+        [TestMethod]
+        public void TestIsPalindromeWithOneLetter() {
+            var word = "a";
             Assert.AreEqual(true, word.IsPalindrome());
         }
     }
