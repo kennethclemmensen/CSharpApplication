@@ -38,7 +38,7 @@ namespace UnitTest.Logic {
         [ExpectedException(typeof(EmptyStringException))]
         public void TestIsPalindromeWithAnEmptyString() {
             var word = "";
-            Assert.AreEqual(true, word.IsPalindrome());
+            word.IsPalindrome();
         }
 
         /// <summary>
