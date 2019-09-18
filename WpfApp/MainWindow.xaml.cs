@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 
 namespace WpfApp {
 
@@ -14,7 +15,12 @@ namespace WpfApp {
             InitializeComponent();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e) {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CloseCommandBinding_Executed(object sender, ExecutedRoutedEventArgs e) {
             Close();
         }
     }

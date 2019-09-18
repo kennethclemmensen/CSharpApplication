@@ -6,10 +6,19 @@
         mc:Ignorable="d"
         Style="{StaticResource WindowStyle}"
         Title="CSharpApplication">
+    
+    <Window.CommandBindings>
+        <CommandBinding Command="Close" Executed="CloseCommandBinding_Executed" />
+    </Window.CommandBindings>
+    
+    <Window.InputBindings>
+        <KeyBinding Key="Q" Modifiers="Control" Command="Close" />
+    </Window.InputBindings>
+    
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
-                <MenuItem Header="Exit" Click="MenuItem_Click" />
+                <MenuItem Header="Quit" Command="Close" InputGestureText="Ctrl+Q" />
             </MenuItem>
         </Menu>
         <Button Name="button">Click me!</Button>
