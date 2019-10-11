@@ -21,6 +21,7 @@
                 <MenuItem Header="Quit" Command="Close" InputGestureText="Ctrl+Q" />
             </MenuItem>
         </Menu>
-        <Button Name="button">Click me!</Button>
+        <Button Name="Button" Click="Button_Click" DockPanel.Dock="Right">Click me!</Button>
+        <TextBox Name="TextBox" DockPanel.Dock="Left" />
     </DockPanel>
 </Window>
