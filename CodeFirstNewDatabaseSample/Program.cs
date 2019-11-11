@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 
@@ -30,6 +31,7 @@ namespace CodeFirstNewDatabaseSample {
 
         public int Id { get; set; }
 
+        [Required]
         public string Term { get; set; }
 
         public string Description { get; set; }
@@ -38,5 +40,9 @@ namespace CodeFirstNewDatabaseSample {
     public class DatabaseContext : DbContext {
 
         public DbSet<Word> Words { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder) {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
