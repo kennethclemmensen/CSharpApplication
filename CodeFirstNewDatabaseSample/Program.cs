@@ -39,6 +39,8 @@ namespace CodeFirstNewDatabaseSample {
 
     public class DatabaseContext : DbContext {
 
+        public DatabaseContext() : base("DbConnection") { }
+
         public DbSet<Word> Words { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) {
