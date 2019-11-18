@@ -13,7 +13,7 @@ namespace DataAccess.Migrations {
         /// and setup the migration settings
         /// </summary>
         public Configuration() {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         /// <summary>
