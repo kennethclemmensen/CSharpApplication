@@ -19,13 +19,14 @@ namespace DataAccess {
         /// <param name="word">The word to add</param>
         /// <exception cref="Exception">Throws an Exception if adding the word to the database fails</exception>
         public void AddWord(Word word) {
+            var db = new DatabaseContext();
             try {
-                using(var db = new DatabaseContext()) {
-                    db.Words.Add(word);
-                    db.SaveChanges();
-                }
+                db.Words.Add(word);
+                db.SaveChanges();
             } catch(Exception) {
                 throw;
+            } finally {
+                db.Dispose();
             }
         }
     }
