@@ -19,6 +19,11 @@ namespace DataAccess {
         public DbSet<Word> Words { get; set; }
 
         /// <summary>
+        /// Represents the Users table in the database
+        /// </summary>
+        public DbSet<User> Users { get; set; }
+
+        /// <summary>
         /// Override the OnModelCreating method with the modelBuilder
         /// to make changes to the model
         /// </summary>

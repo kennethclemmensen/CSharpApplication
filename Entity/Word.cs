@@ -22,5 +22,15 @@ namespace Entity {
         /// Get or set the description
         /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// Get or set the user ID
+        /// </summary>
+        public int UserId { get; set; }
+
+        /// <summary>
+        /// Get or set the user
+        /// </summary>
+        public virtual User User { get; set; }
     }
 }

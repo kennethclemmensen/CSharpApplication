@@ -56,6 +56,10 @@
     <Compile Include="Migrations\201911182026440_AddWord.designer.cs">
       <DependentUpon>201911182026440_AddWord.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911211519378_AddUser.cs" />
+    <Compile Include="Migrations\201911211519378_AddUser.designer.cs">
+      <DependentUpon>201911211519378_AddUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WordsAccess.cs" />
@@ -73,6 +77,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201911182026440_AddWord.resx">
       <DependentUpon>201911182026440_AddWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911211519378_AddUser.resx">
+      <DependentUpon>201911211519378_AddUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
