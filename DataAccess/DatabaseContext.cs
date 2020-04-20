@@ -1,5 +1,5 @@
 ﻿using Entity;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess {
 
@@ -11,7 +11,7 @@ namespace DataAccess {
         /// <summary>
         /// Initialize a new instance of the DatabaseContext class
         /// </summary>
-        public DatabaseContext() : base("DbConnection") { }
+        public DatabaseContext() { }
 
         /// <summary>
         /// Represents the Words table in the database
@@ -24,12 +24,11 @@ namespace DataAccess {
         public DbSet<User> Users { get; set; }
 
         /// <summary>
-        /// Override the OnModelCreating method with the modelBuilder
-        /// to make changes to the model
+        /// Configure the database using the options builder
         /// </summary>
-        /// <param name="modelBuilder">The model builder</param>
-        protected override void OnModelCreating(DbModelBuilder modelBuilder) {
-            base.OnModelCreating(modelBuilder);
+        /// <param name="optionsBuilder">The options builder</param>
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
+            optionsBuilder.UseSqlServer("Data Source=localhost; Initial Catalog=CSharpApplication; Integrated Security=True");
         }
     }
 }
