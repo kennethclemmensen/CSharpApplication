@@ -26,7 +26,7 @@ namespace Entity {
         /// <summary>
         /// Get or set the user ID
         /// </summary>
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
 
         /// <summary>
         /// Get or set the user
