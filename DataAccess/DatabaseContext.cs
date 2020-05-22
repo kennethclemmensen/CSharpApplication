@@ -27,8 +27,7 @@ namespace DataAccess {
         /// Configure the database using the options builder
         /// </summary>
         /// <param name="optionsBuilder">The options builder</param>
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
             optionsBuilder.UseSqlServer("Data Source=localhost; Initial Catalog=CSharpApplication; Integrated Security=True");
-        }
     }
 }
